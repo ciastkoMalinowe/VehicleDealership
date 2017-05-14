@@ -1,6 +1,6 @@
 import java.math.BigDecimal;
 
-enum ModelType{
+public enum ModelType{
     modelA(new BigDecimal(100000.0)),
     modelB(new BigDecimal(2000000.0));
 

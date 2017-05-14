@@ -1,11 +1,27 @@
 import java.math.BigDecimal;
-import java.util.Collection;
+import java.util.Collection.HashSet;
 
 class Vehicle {
 
     private ModelType model;
     private EngineType engine;
-    private Collection<Component> components;
+    private HashSet<Component> components;
+
+    Vehicle(ModelType model, EngineType engine){
+
+        this.model = model;
+        this.engine = engine;
+        this.components = new HashSet<Component>;
+    }
+
+    void addComponent( Component component){
+        if(!components.contains(component))
+            components.add(component);
+    }
+
+    void int getComponentsNumber(){
+        return components.size();
+    }
 
     public BigDecimal getPrice(){
 
