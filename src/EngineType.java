@@ -1,6 +1,6 @@
 import java.math.BigDecimal;
 
-enum EngineType{
+public enum EngineType{
     petrol_1_0(new BigDecimal(150000.0), "1.0 petrol"),
     petrol_1_2(new BigDecimal(20000.0), "1.2 petrol"),
     petrol_1_4(new BigDecimal(250000.0), "1.4 petrol"),
