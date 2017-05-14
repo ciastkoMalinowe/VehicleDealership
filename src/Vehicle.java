@@ -1,5 +1,5 @@
 import java.math.BigDecimal;
-import java.util.Collection.HashSet;
+import java.util.HashSet;
 
 class Vehicle {
 
@@ -11,7 +11,7 @@ class Vehicle {
 
         this.model = model;
         this.engine = engine;
-        this.components = new HashSet<Component>;
+        this.components = new HashSet<>();
     }
 
     void addComponent( Component component){
@@ -19,28 +19,28 @@ class Vehicle {
             components.add(component);
     }
 
-    void int getComponentsNumber(){
+    int getComponentsNumber(){
         return components.size();
     }
 
     public BigDecimal getPrice(){
 
         BigDecimal price = new BigDecimal(0.0);
-        price.add(model.getPrice());
-        price.add(engine.getPrice());
+        price = price.add(model.getPrice());
+        price = price.add(engine.getPrice());
         for(Component component : components){
-            price.add(component.getPrice());
+            price = price.add(component.getPrice());
         }
         return price;
     }
 
     public String getDescription(){
-        String description = "Configured vehicle of " + model.name() + " with " + engine.getName() + " engine and ";
+        StringBuilder description = new StringBuilder("Configured vehicle of " + model.name() + " with " + engine.getName() + " engine and ");
         for(Component component : components){
-            description += component.getDescription() + ", ";
+            description.append(component.getDescription()).append(", ");
         }
-        description += ".";
-        return description;
+        description.append(".");
+        return description.toString();
     }
 }
 
