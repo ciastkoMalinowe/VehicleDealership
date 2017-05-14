@@ -12,6 +12,10 @@ public class Component {
         this.id = id;
     }
 
+    public Component(Component old) {
+        this(old.getPrice(), old.getDescription(), old.getId());
+    }
+
     public BigDecimal getPrice(){
         return price;
     }
