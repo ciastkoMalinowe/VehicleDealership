@@ -1,7 +1,9 @@
+package VehicleDealership;
+
 import java.math.BigDecimal;
 import java.util.HashSet;
 
-class Vehicle {
+public class Vehicle {
 
     private ModelType model;
     private EngineType engine;

@@ -1,3 +1,5 @@
+package VehicleDealership;
+
 import java.math.BigDecimal;
 import java.util.LinkedList;
 import java.util.List;
@@ -14,5 +16,11 @@ public class ComponentManager {
 
     public Component getComponent(int id) {
         return new Component(components.get(id));
+    }
+
+    public void printComponents(){
+        for(Component component : components){
+            System.out.println(component.getId() + ". " + component.getDescription());
+        }
     }
 }

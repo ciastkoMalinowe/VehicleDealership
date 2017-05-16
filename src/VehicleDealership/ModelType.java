@@ -1,3 +1,5 @@
+package VehicleDealership;
+
 import java.math.BigDecimal;
 
 public enum ModelType{

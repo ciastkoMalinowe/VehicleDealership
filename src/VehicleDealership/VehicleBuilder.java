@@ -1,3 +1,5 @@
+package VehicleDealership;
+
 public class VehicleBuilder{
 
     private Vehicle vehicle;
@@ -10,7 +12,7 @@ public class VehicleBuilder{
         vehicle.addComponent(component);
     }
 
-    private boolean canBeBuild(){
+    public boolean canBeBuild(){
         return vehicle.getComponentsNumber() >= 2;
     }
 

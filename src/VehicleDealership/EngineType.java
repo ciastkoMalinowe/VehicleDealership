@@ -1,3 +1,5 @@
+package VehicleDealership;
+
 import java.math.BigDecimal;
 
 public enum EngineType{
@@ -11,7 +13,7 @@ public enum EngineType{
     private BigDecimal price;
     private String name;
 
-    private EngineType(BigDecimal price, String name){
+    EngineType(BigDecimal price, String name){
         this.price = price;
         this.name = name;
     }
